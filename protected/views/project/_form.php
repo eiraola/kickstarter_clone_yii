@@ -32,8 +32,9 @@
 	</div>
 
 	<div class="row">
+
 		<?php echo $form->labelEx($model,'type'); ?>
-		<?php echo $form->textField($model,'type'); ?>
+        <?php echo $form->dropDownList($model,'type', Type::typeList()); ?>
 		<?php echo $form->error($model,'type'); ?>
 	</div>
 
