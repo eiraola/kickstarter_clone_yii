@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/components/UserIdentity.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/components/UserIdentity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/config/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/config/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599028607093</updated>
-      <workItem from="1599028608172" duration="16397000" />
+      <workItem from="1599028608172" duration="23229000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -46,7 +49,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599049299505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Creating views and authentication">
+      <created>1599058629894</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599058629894</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -54,13 +64,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="instal gii" />
-    <option name="LAST_COMMIT_MESSAGE" value="instal gii" />
+    <MESSAGE value="Creating views and authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating views and authentication" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599049298425">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599058628577">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599049298425" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599058628577" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1599047459020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -69,13 +80,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599047516491" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599049313014">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599058636222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599049313014" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1599030643846">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599058636222" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1599067559572">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599030643846" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599067559572" />
   </component>
 </project>

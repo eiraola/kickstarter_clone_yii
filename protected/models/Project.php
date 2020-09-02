@@ -50,7 +50,7 @@ class Project extends CActiveRecord
 		// class name for the relations automatically generated below.
         return array(
             'author' => array(self::BELONGS_TO, 'User', 'author_id'),
-            'type' => array(self::BELONGS_TO, 'Type', 'type'),
+            'types' => array(self::BELONGS_TO, 'Type', 'type'),
             'comments' => array(self::HAS_MANY, 'Comment', 'post_id',
                 'order'=>'comments.create_time DESC'),
 

@@ -5,6 +5,8 @@
 
 <div class="view">
 
+    <b> Author </b>: <?php   echo  $data->author->username ?><br />
+    <b> Type </b>: <?php   echo  $data->types->name ?><br />
 	<b><?php echo CHtml::encode($data->getAttributeLabel('id')); ?>:</b>
 	<?php echo CHtml::link(CHtml::encode($data->id), array('view', 'id'=>$data->id)); ?>
 	<br />

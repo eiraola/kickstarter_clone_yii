@@ -1,5 +1,5 @@
 <?php
-
+use Yii;
 /**
  * This is the model class for table "tbl_user".
  *
@@ -113,5 +113,10 @@ class User extends CActiveRecord
     public function hashPassword($password)
     {
         return CPasswordHelper::hashPassword($password);
+    }
+
+    public function beforeSave(){
+
+	    $this->password = $this->hashPassword($this->password);
     }
 }
