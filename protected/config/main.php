@@ -98,7 +98,7 @@ return array(
     'modules'=>array(
         'gii'=>array(
             'class'=>'system.gii.GiiModule',
-            'password'=>'pick up a password here',
+            'password'=>'miau',
         ),
     ),
 );
