@@ -50,7 +50,14 @@ return array(
 		),
 		*/
 
-
+        'db'=>array(
+            'connectionString' => 'mysql:host=localhost;dbname=blog',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'tablePrefix' => 'tbl_',
+        ),
 		// database settings are configured in database.php
 		'db'=>require(dirname(__FILE__).'/database.php'),
 
@@ -83,4 +90,15 @@ return array(
 		// this is used in contact page
 		'adminEmail'=>'webmaster@example.com',
 	),
+    'import'=>array(
+        'application.models.*',
+        'application.components.*',
+    ),
+
+    'modules'=>array(
+        'gii'=>array(
+            'class'=>'system.gii.GiiModule',
+            'password'=>'pick up a password here',
+        ),
+    ),
 );
