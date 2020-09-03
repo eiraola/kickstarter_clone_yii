@@ -145,11 +145,5 @@ class Project extends CActiveRecord
         else
             return false;
     }
-    protected function afterDelete()
-    {
-        parent::afterDelete();
-        Comment::model()->deleteAll('post_id='.$this->id);
-
-    }
 
 }

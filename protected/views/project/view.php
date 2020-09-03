@@ -16,7 +16,7 @@ $this->menu=array(
 );
 ?>
 
-<h1>View Project #<?php echo $model->id; ?></h1>
+<h1><?php echo $model->title; ?></h1>
 
 <?php $this->widget('zii.widgets.CDetailView', array(
 	'data'=>$model,
@@ -35,15 +35,3 @@ $this->menu=array(
 
 ?>
 
-<div id="comments">
-    <?php if($model->commentCount>=1): ?>
-        <h3>
-            <?php echo $model->commentCount . 'comment(s)'; ?>
-        </h3>
-
-        <?php $this->renderPartial('_comments',array(
-            'post'=>$model,
-            'comments'=>$model->comments,
-        )); ?>
-    <?php endif; ?>
-</div>

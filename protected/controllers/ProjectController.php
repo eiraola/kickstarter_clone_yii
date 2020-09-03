@@ -6,7 +6,7 @@ class ProjectController extends Controller
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
-	public $layout='//layouts/column2';
+	//public $layout='//layouts/column2';
 
 	/**
 	 * @return array action filters
@@ -61,7 +61,7 @@ class ProjectController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
+        $layout='//layouts/column2';
 		if(isset($_POST['Project']))
 		{
 			$model->attributes=$_POST['Project'];
@@ -117,11 +117,32 @@ class ProjectController extends Controller
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Project');
+		$dataProvider=new CActiveDataProvider('Project',);
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
 	}
+    public function actionIndexGames()
+    {
+        $dataProvider=new CActiveDataProvider('Project',array('criteria'=>array('condition'=>'type=1')));
+        $this->render('indexGames',array(
+            'dataProvider'=>$dataProvider,
+        ));
+    }
+    public function actionIndexBGames()
+    {
+        $dataProvider=new CActiveDataProvider('Project',array('criteria'=>array('condition'=>'type=2')));
+        $this->render('indexBGames',array(
+            'dataProvider'=>$dataProvider,
+        ));
+    }
+    public function actionIndexMovies()
+    {
+        $dataProvider=new CActiveDataProvider('Project',array('criteria'=>array('condition'=>'type=3')));
+        $this->render('indexMovies',array(
+            'dataProvider'=>$dataProvider,
+        ));
+    }
 
 	/**
 	 * Manages all models.
