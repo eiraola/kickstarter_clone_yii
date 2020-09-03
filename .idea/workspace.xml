@@ -3,9 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Type.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Type.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/project/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +44,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599028607093</updated>
       <workItem from="1599028608172" duration="26261000" />
+      <workItem from="1599111011059" duration="5758000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>

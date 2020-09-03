@@ -132,4 +132,11 @@ class Type extends CActiveRecord
             ->queryColumn() ;
 
     }
+    public static function getType(){
+        return  Yii::app()->db->createCommand()
+            ->selectDistinct('name')
+            ->from('tbl_type')
+            ->queryColumn() ;
+
+    }
 }

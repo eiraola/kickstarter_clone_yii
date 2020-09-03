@@ -31,7 +31,7 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, type, status, author_id', 'required'),
+			array('title, content, type, status', 'required'),
 			array('type, status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
             array('type', 'normalizeType'),
@@ -136,6 +136,7 @@ class Project extends CActiveRecord
             {
                 $this->create_time=$this->update_time=time();
                 $this->author_id=Yii::app()->user->id;
+                $this->type=$this->type+1;
             }
             else
                 $this->update_time=time();
@@ -143,6 +144,12 @@ class Project extends CActiveRecord
         }
         else
             return false;
+    }
+    protected function afterDelete()
+    {
+        parent::afterDelete();
+        Comment::model()->deleteAll('post_id='.$this->id);
+
     }
 
 }
