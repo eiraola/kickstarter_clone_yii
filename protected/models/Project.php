@@ -70,7 +70,7 @@ class Project extends CActiveRecord
 			'content' => 'Content',
 			'type' => 'Type',
 			'status' => 'Status',
-			'create_time' => 'Create Time',
+			'create_time' => 'Created at',
 			'update_time' => 'Update Time',
 			'author_id' => 'Author',
 		);

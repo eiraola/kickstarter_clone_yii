@@ -4,12 +4,12 @@
 
 ?>
 
-<div class="view">
+<div class="comments">
 
 
 
     <?php foreach($comments as $comment): ?>
-    hola
+
         <div class="comment" id="c<?php echo $comment->id; ?>">
 
             <?php /*echo CHtml::link("#{$comment->id}", $comment->getUrl($data), array(

@@ -13,7 +13,7 @@ $this->menu=array(
 ?>
 
 <div class="sectiontitle"><h1>Videogames</h1></div>
-<div class="sectionsubtitle">Boardgames</div>
+<div class="sectionsubtitle">Live in your world. Play in ours</div>
 <?php $this->widget('zii.widgets.CListView', array(
 	'dataProvider'=>$dataProvider,
 	'itemView'=>'_view',

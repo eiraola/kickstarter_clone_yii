@@ -32,7 +32,7 @@ class Comment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content, status, author, email, user_id, project_id', 'required'),
+			array('content,project_id', 'required'),
 			array('status, create_time, user_id, project_id', 'numerical', 'integerOnly'=>true),
 			array('author, email, url', 'length', 'max'=>128),
 			// The following rule is used by search().
@@ -121,7 +121,11 @@ class Comment extends CActiveRecord
         if(parent::beforeSave())
         {
             if($this->isNewRecord)
+                $this->user_id=Yii::app()->user->id;
                 $this->create_time=time();
+                $this->status=0;
+                $this->author="";
+                $this->email="";
             return true;
         }
         else

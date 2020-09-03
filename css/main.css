@@ -146,7 +146,7 @@ div.form .rememberMe label
 div.view
 {
 	float: left;
-	width: 45%;
+	width: 43%;
 	text-align: justify;
 	padding: 10px;
 	margin: 10px 0;
@@ -256,7 +256,7 @@ img.projPic{
 img.projPic:hover{
 	margin-top: 0px;
 	border-bottom: 10px solid #2e7029;
-	transition: all 0.3s ease;
+
 }
 .sectiontitle{
 	text-align: left;
@@ -272,4 +272,44 @@ img.projPic:hover{
 	font-size: 15px;
 
 
+}
+
+.yokse{
+	width: 50%;
+	margin: auto;
+
+}
+.comments{
+	width: 80%;
+	background-color: #aaaaaa;
+	padding: 20px;
+	margin: 0 auto;
+}
+
+
+.comment{
+
+	background-color: #FEFEFE;
+	margin: 20px auto;
+	text-align: left;
+	padding: 10px;
+}
+
+.author{
+	font-family: "Times New Roman", Times, serif;
+	font-size: medium;
+	margin-bottom: 10px;
+}
+
+.time{
+	font-family: "Times New Roman", Times, serif;
+	font-size:small;
+	color: #aaaaaa;
+	margin-bottom: 10px;
+}
+.content{
+	font-family: "Times New Roman", Times, serif;
+	font-size:large;
+
+	margin-bottom: 10px;
 }

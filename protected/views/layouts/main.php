@@ -53,9 +53,9 @@
 			'links'=>$this->breadcrumbs,
 		)); ?><!-- breadcrumbs -->
 	<?php endif?>
-
-	<?php echo $content; ?>
-
+    <div class="yokse">
+        <?php echo $content; ?>
+    </div>
 	<div class="clear"></div>
 
 	<div id="footer">

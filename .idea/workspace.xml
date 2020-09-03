@@ -2,21 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/protected/components/RecentComments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protected/components/UserMenu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protected/components/views/recentComments.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protected/components/views/userMenu.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/protected/views/project/_comments.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/data/schema.mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/protected/data/schema.mysql.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/comment/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/comment/_form.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/comment/_search.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/comment/_search.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/project/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/_comments.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_comments.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/indexBGames.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/indexBGames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/indexGames.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/indexGames.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/project/indexMovies.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/indexMovies.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1599028607093</updated>
       <workItem from="1599028608172" duration="26261000" />
-      <workItem from="1599111011059" duration="28543000" />
+      <workItem from="1599111011059" duration="36378000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -95,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599134668685</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Comments creation and view are avaiable now">
+      <created>1599144076076</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1599144076076</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,17 +112,18 @@
     <MESSAGE value="Added type and author to the project views" />
     <MESSAGE value="minnor improvements" />
     <MESSAGE value="generate views for each type of element" />
-    <option name="LAST_COMMIT_MESSAGE" value="generate views for each type of element" />
+    <MESSAGE value="Comments creation and view are avaiable now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments creation and view are avaiable now" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599127820446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599127820446" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599134667387">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599144074261">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599134667387" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599144074261" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1599047459020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -134,14 +140,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599137189932" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599134673936">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599144081801">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599134673936" />
-    <state x="1110" y="243" width="585" height="534" key="find.popup" timestamp="1599142020615">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599144081801" />
+    <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599165291228">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1110" y="243" width="585" height="534" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599142020615" />
+    <state x="1110" y="243" width="585" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599165291228" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1599121547722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

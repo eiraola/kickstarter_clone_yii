@@ -63,7 +63,7 @@ class ProjectController extends Controller
             $comment->attributes=$_POST['Comment'];
             if($post->addComment($comment))
             {
-                Yii::app()->user->setFlash('commentSubmitted','Thank you for your comment. Your comment will be posted once it is approved.');
+               // Yii::app()->user->setFlash('commentSubmitted','Thank you for your comment. Your comment will be posted once it is approved.');
                 $this->refresh();
             }
         }
