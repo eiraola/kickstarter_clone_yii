@@ -51,8 +51,10 @@ class Project extends CActiveRecord
         return array(
             'author' => array(self::BELONGS_TO, 'User', 'author_id'),
             'types' => array(self::BELONGS_TO, 'Type', 'type'),
-            'comments' => array(self::HAS_MANY, 'Comment', 'post_id',
+            'comments' => array(self::HAS_MANY, 'Comment', 'project_id',
                 'order'=>'comments.create_time DESC'),
+            'commentCount' => array(self::STAT, 'Comment', 'project_id')
+
 
         );
 	}
@@ -144,6 +146,13 @@ class Project extends CActiveRecord
         }
         else
             return false;
+    }
+
+    public function addComment($comment)
+    {
+
+        $comment->project_id=$this->id;
+        return $comment->save();
     }
 
 }

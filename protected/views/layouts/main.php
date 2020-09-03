@@ -23,7 +23,10 @@
 </head>
 
 <body>
+<div id="sidebar">
 
+    <?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
+</div>
 <div class="container" id="page">
 
 	<div id="header">

@@ -11,7 +11,7 @@
  * @property string $author
  * @property string $email
  * @property string $url
- * @property integer $post_id
+ * @property integer $user_id
  * @property integer $project_id
  */
 class Comment extends CActiveRecord
@@ -32,12 +32,12 @@ class Comment extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('content, status, author, email, post_id, project_id', 'required'),
-			array('status, create_time, post_id, project_id', 'numerical', 'integerOnly'=>true),
+			array('content, status, author, email, user_id, project_id', 'required'),
+			array('status, create_time, user_id, project_id', 'numerical', 'integerOnly'=>true),
 			array('author, email, url', 'length', 'max'=>128),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, content, status, create_time, author, email, url, post_id, project_id', 'safe', 'on'=>'search'),
+			array('id, content, status, create_time, author, email, url, user_id, project_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -46,9 +46,11 @@ class Comment extends CActiveRecord
 	 */
 	public function relations()
 	{
+
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+            'authore'=> array(self::BELONGS_TO, 'User', 'user_id')
 		);
 	}
 
@@ -65,7 +67,7 @@ class Comment extends CActiveRecord
 			'author' => 'Author',
 			'email' => 'Email',
 			'url' => 'Url',
-			'post_id' => 'Post',
+			'user_id' => 'User',
 			'project_id' => 'Project',
 		);
 	}
@@ -95,7 +97,7 @@ class Comment extends CActiveRecord
 		$criteria->compare('author',$this->author,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('url',$this->url,true);
-		$criteria->compare('post_id',$this->post_id);
+		$criteria->compare('user_id',$this->user_id);
 		$criteria->compare('project_id',$this->project_id);
 
 		return new CActiveDataProvider($this, array(
@@ -113,6 +115,7 @@ class Comment extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
     protected function beforeSave()
     {
         if(parent::beforeSave())
@@ -124,4 +127,14 @@ class Comment extends CActiveRecord
         else
             return false;
     }
+
+    public function findRecentComments($limit=10)
+    {
+        return $this->with('project')->findAll(array(
+
+            'order'=>'t.create_time DESC',
+            'limit'=>$limit,
+        ));
+    }
+
 }
