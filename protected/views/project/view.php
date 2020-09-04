@@ -76,6 +76,10 @@ $this->menu=array(
             'model'=>$comment,
         )); ?>
 
+    <?php $this->renderPartial('/likeProject/_form',array(
+        'model'=>$like,
+    )); ?>
+
 
 
 

@@ -89,7 +89,7 @@ class ProjectController extends Controller
     protected function newLike($post)
     {
         $like=new LikeProject();
-        if(isset($_POST['Found']))
+        if(isset($_POST['LikeProject']))
         {
             $like->attributes=$_POST['LikeProject'];
             if($post->addComment($like))

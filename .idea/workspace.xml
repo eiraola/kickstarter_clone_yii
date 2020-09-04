@@ -3,9 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/FoundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/FoundController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/models/Found.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Found.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/models/LikeProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/LikeProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/likeProject/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/likeProject/_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/project/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +51,7 @@
       <updated>1599028607093</updated>
       <workItem from="1599028608172" duration="26261000" />
       <workItem from="1599111011059" duration="36378000" />
-      <workItem from="1599194214139" duration="10512000" />
+      <workItem from="1599194214139" duration="16098000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -100,7 +102,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599204126593</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Donations fully operational!">
+      <created>1599207198668</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1599207198668</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,17 +123,18 @@
     <MESSAGE value="generate views for each type of element" />
     <MESSAGE value="Comments creation and view are avaiable now" />
     <MESSAGE value="Added found support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added found support" />
+    <MESSAGE value="Donations fully operational!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Donations fully operational!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599127820446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599127820446" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599204125152">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599207197518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599204125152" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599207197518" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1599047459020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -141,14 +151,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599137189932" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599204135227">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599207205582">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599204135227" />
-    <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599204842927">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599207205582" />
+    <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599208645180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1110" y="243" width="585" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599204842927" />
+    <state x="1110" y="243" width="585" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599208645180" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1599121547722">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

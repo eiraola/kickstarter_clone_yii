@@ -54,8 +54,10 @@ class Project extends CActiveRecord
             'comments' => array(self::HAS_MANY, 'Comment', 'project_id',
                 'order'=>'comments.create_time DESC'),
             'commentCount' => array(self::STAT, 'Comment', 'project_id'),
+            'likeCount' => array(self::STAT, 'LikeProject', 'project_id'),
             'found' => array(self::HAS_MANY, 'Found', 'project_id'),
-            'likes' => array(self::HAS_MANY, 'LikeProject', 'project_id')
+            'likes' => array(self::HAS_MANY, 'LikeProject', 'project_id'),
+
 
 
         );

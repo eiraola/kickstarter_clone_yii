@@ -25,7 +25,7 @@ class LikeProject extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('user_id, project_id', 'required'),
+
 			array('user_id, project_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -89,6 +89,17 @@ class LikeProject extends CActiveRecord
 	 */
 	public static function model($className=__CLASS__)
 	{
-		return parent::model($className);
+	    return parent::model($className);
 	}
+    protected function beforeSave()
+    {
+        if(parent::beforeSave())
+        {
+            if($this->isNewRecord)
+                $this->user_id=Yii::app()->user->id;
+            return true;
+        }
+        else
+            return false;
+    }
 }
