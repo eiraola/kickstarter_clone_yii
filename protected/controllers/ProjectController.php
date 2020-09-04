@@ -49,10 +49,12 @@ class ProjectController extends Controller
         $post=$this->loadModel($id);
         $comment=$this->newComment($post);
         $founds = $this->newFound($post);
+        $like = $this->newlike($post);
         $this->render('view',array(
             'model'=>$post,
             'comment'=>$comment,
-            'founds' => $founds
+            'founds' => $founds,
+            'like' => $like
         ));
     }
 
@@ -73,8 +75,30 @@ class ProjectController extends Controller
     protected function newFound($post)
     {
         $found=new Found;
-
+        if(isset($_POST['Found']))
+        {
+            $found->attributes=$_POST['Found'];
+            if($post->addComment($found))
+            {
+                Yii::app()->user->setFlash('commentSubmitted','Thank you for your dolars!');
+                $this->refresh();
+            }
+        }
         return $found;
+    }
+    protected function newLike($post)
+    {
+        $like=new LikeProject();
+        if(isset($_POST['Found']))
+        {
+            $like->attributes=$_POST['LikeProject'];
+            if($post->addComment($like))
+            {
+                Yii::app()->user->setFlash('commentSubmitted','Thank you for your support!');
+                $this->refresh();
+            }
+        }
+        return $like;
     }
 	/**
 	 * Creates a new model.

@@ -27,7 +27,7 @@ class Found extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('amount, user_id, project_id', 'required'),
+			array('amount', 'required'),
 			array('amount, user_id, project_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.

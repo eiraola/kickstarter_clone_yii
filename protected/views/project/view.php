@@ -18,13 +18,11 @@ $this->menu=array(
 
 <div class="ptitle"><h1><?php echo $model->title; ?></h1></div>
 
-<div class="ppicDiv" >
-    <?php echo  '<img src="images/profile.jpg" class="pprojPic">';?></h1>
+    <div class="ppicDiv" >
+        <?php echo  '<img src="images/profile.jpg" class="pprojPic">';?></h1>
 
-</div>
-<div class="pview">
-
-
+    </div>
+    <div class="pview">
 
 
 
@@ -34,22 +32,26 @@ $this->menu=array(
 
 
 
-    <div class="author"><b> Author </b>: <?php   echo  $model->author->username ?><br /></div>
-
-    <b><?php echo CHtml::encode($model->getAttributeLabel('content')); ?>: </b>
-    <?php echo CHtml::encode($model->content); ?>
 
 
-    <div class="time">
-        <b><?php echo CHtml::encode($model->getAttributeLabel('create_time')); ?></b>
-        <?php echo CHtml::encode(date("Y-m-d h:i:s",$model->create_time)); ?>
+        <div class="author"><b> Author </b>: <?php   echo  $model->author->username ?><br /></div>
+
+        <b><?php echo CHtml::encode($model->getAttributeLabel('content')); ?>: </b>
+        <?php echo CHtml::encode($model->content); ?>
+
+
+        <div class="time">
+            <b><?php echo CHtml::encode($model->getAttributeLabel('create_time')); ?></b>
+            <?php echo CHtml::encode(date("Y-m-d h:i:s",$model->create_time)); ?>
+        </div>
+
     </div>
 
+
 </div>
-
-
-</div
-
+<div class="donations"> <?php $this->renderPartial('/found/_form',array(
+        'model'=>$founds,
+    )); ?></div>
 
 <div id="comments">
     <?php if($model->commentCount>=1): ?>
@@ -74,9 +76,7 @@ $this->menu=array(
             'model'=>$comment,
         )); ?>
 
-    <?php $this->renderPartial('/found/_form',array(
-        'model'=>$founds,
-    )); ?>
+
 
 
 </div>
