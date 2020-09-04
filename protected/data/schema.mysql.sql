@@ -48,6 +48,7 @@ CREATE TABLE tbl_type
 );
 CREATE TABLE tbl_like_project
 (
+    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	user_id INTEGER NOT NULL,
 	project_id INTEGER NOT NULL,
 

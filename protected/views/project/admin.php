@@ -66,7 +66,7 @@ $this->breadcrumbs=array(
     'Manage Posts',
 );
 ?>
-<h1>Manage Posts</h1>
+<h1>Manage Project</h1>
 
 <?php $this->widget('zii.widgets.grid.CGridView', array(
     'dataProvider'=>$model->search(),

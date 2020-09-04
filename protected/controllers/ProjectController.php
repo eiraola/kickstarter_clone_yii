@@ -48,10 +48,11 @@ class ProjectController extends Controller
     {
         $post=$this->loadModel($id);
         $comment=$this->newComment($post);
-
+        $founds = $this->newFound($post);
         $this->render('view',array(
             'model'=>$post,
             'comment'=>$comment,
+            'founds' => $founds
         ));
     }
 
@@ -63,11 +64,17 @@ class ProjectController extends Controller
             $comment->attributes=$_POST['Comment'];
             if($post->addComment($comment))
             {
-               // Yii::app()->user->setFlash('commentSubmitted','Thank you for your comment. Your comment will be posted once it is approved.');
+                Yii::app()->user->setFlash('commentSubmitted','Thank you for your comment!');
                 $this->refresh();
             }
         }
         return $comment;
+    }
+    protected function newFound($post)
+    {
+        $found=new Found;
+
+        return $found;
     }
 	/**
 	 * Creates a new model.

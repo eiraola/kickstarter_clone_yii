@@ -53,7 +53,8 @@ class Project extends CActiveRecord
             'types' => array(self::BELONGS_TO, 'Type', 'type'),
             'comments' => array(self::HAS_MANY, 'Comment', 'project_id',
                 'order'=>'comments.create_time DESC'),
-            'commentCount' => array(self::STAT, 'Comment', 'project_id')
+            'commentCount' => array(self::STAT, 'Comment', 'project_id'),
+            'found' => array(self::HAS_MANY, 'Found', 'project_id')
 
 
         );
@@ -153,6 +154,12 @@ class Project extends CActiveRecord
 
         $comment->project_id=$this->id;
         return $comment->save();
+    }
+    public function addFound($found)
+    {
+
+        $found->post_id=$this->id;
+        return $found->save();
     }
 
 }

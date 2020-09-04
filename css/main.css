@@ -284,6 +284,7 @@ img.projPic:hover{
 	background-color: #aaaaaa;
 	padding: 20px;
 	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 
@@ -312,4 +313,16 @@ img.projPic:hover{
 	font-size:large;
 
 	margin-bottom: 10px;
+}
+
+.pview{
+	text-align: left;
+}
+
+.pprojPic{
+	width: 100%;
+
+}
+.ppicDiv{
+	margin: 0 auto
 }
