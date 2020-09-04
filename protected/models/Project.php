@@ -56,6 +56,7 @@ class Project extends CActiveRecord
             'commentCount' => array(self::STAT, 'Comment', 'project_id'),
             'likeCount' => array(self::STAT, 'LikeProject', 'project_id'),
             'found' => array(self::HAS_MANY, 'Found', 'project_id'),
+            'foundsum' => array(self::STAT, 'Found', 'project_id','select'=>'sum(amount)',),
             'likes' => array(self::HAS_MANY, 'LikeProject', 'project_id'),
 
 

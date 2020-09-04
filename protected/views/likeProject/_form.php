@@ -16,6 +16,21 @@
 )); ?>
 
 
+
+	<?php echo $form->errorSummary($model); ?>
+    <div style="display: none">
+        <div class="row">
+            <?php echo $form->labelEx($model,'user_id'); ?>
+            <?php echo $form->textField($model,'user_id'); ?>
+            <?php echo $form->error($model,'user_id'); ?>
+        </div>
+
+        <div class="row">
+            <?php echo $form->labelEx($model,'project_id'); ?>
+            <?php echo $form->textField($model,'project_id'); ?>
+            <?php echo $form->error($model,'project_id'); ?>
+        </div>
+    </div>
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Like' : 'Save'); ?>
 	</div>

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/controllers/FoundController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/FoundController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/models/LikeProject.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/LikeProject.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/likeProject/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/likeProject/_form.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/project/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/view.php" afterDir="false" />
@@ -51,7 +48,7 @@
       <updated>1599028607093</updated>
       <workItem from="1599028608172" duration="26261000" />
       <workItem from="1599111011059" duration="36378000" />
-      <workItem from="1599194214139" duration="16098000" />
+      <workItem from="1599194214139" duration="17696000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -109,7 +106,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599207198668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Like system on process">
+      <created>1599213134981</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1599213134981</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,17 +128,22 @@
     <MESSAGE value="Comments creation and view are avaiable now" />
     <MESSAGE value="Added found support" />
     <MESSAGE value="Donations fully operational!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Donations fully operational!" />
+    <MESSAGE value="Like system on process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Like system on process" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599127820446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599127820446" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599207197518">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599213133889">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599207197518" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213133889" />
+    <state x="184" y="86" key="DiffContextDialog" timestamp="1599213126346">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213126346" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1599047459020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -151,10 +160,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599137189932" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599207205582">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599213199621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599207205582" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213199621" />
     <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599208645180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
