@@ -23,14 +23,11 @@
 </head>
 
 <body>
-<div id="sidebar">
 
-    <?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); ?>
-</div>
 <div class="container" id="page">
 
 	<div id="header">
-		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?></div>
+		<div id="logo"><?php echo CHtml::encode(Yii::app()->name); ?><div  class="sideMenu" style="float:right"><?php if(!Yii::app()->user->isGuest) $this->widget('UserMenu'); else $this->widget('GuestMenu'); ?></div></div>
 	</div><!-- header -->
     <hr>
 	<div id="mainmenu">
@@ -42,10 +39,11 @@
                 array('label'=>'Boardgames', 'url'=>array('/project/indexBGames')),
                 array('label'=>'Movies', 'url'=>array('/project/indexMovies')),
 				//array('label'=>'Contact', 'url'=>array('/site/contact')),
-				array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
-				array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
+				//array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+				//array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
 			),
 		)); ?>
+
 	</div><!-- mainmenu -->
     <hr>
 	<?php if(isset($this->breadcrumbs)):?>

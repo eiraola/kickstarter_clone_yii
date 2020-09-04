@@ -19,7 +19,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	border-top: 3px solid #C9E0ED;
+
 }
 
 #content
@@ -43,6 +43,8 @@ body
 
 #logo
 {
+
+	text-align: center;
 	padding: 10px 20px;
 	font-size: 200%;
 	font-family: 'Bowlby One SC', cursive;
@@ -146,7 +148,7 @@ div.form .rememberMe label
 div.view
 {
 	float: left;
-	width: 43%;
+	width: 42%;
 	text-align: justify;
 	padding: 10px;
 	margin: 10px 0;
@@ -181,7 +183,7 @@ div.search-form
 .portlet-decoration
 {
 	padding: 3px 8px;
-	background: #B7D6E7;
+
 	border-left: 5px solid #6FACCF;
 }
 
@@ -199,7 +201,7 @@ div.search-form
 	font-size:0.9em;
 	margin: 0 0 15px 0;
 	padding: 5px 8px;
-	background:#EFFDFF;
+
 }
 
 .portlet-content ul
@@ -294,6 +296,7 @@ img.projPic:hover{
 	margin: 20px auto;
 	text-align: left;
 	padding: 10px;
+
 }
 
 .author{
@@ -317,12 +320,76 @@ img.projPic:hover{
 
 .pview{
 	text-align: left;
+	width: 100%;
+	display: inline-block;
+
+
 }
 
 .pprojPic{
+
 	width: 100%;
+
 
 }
 .ppicDiv{
+	float: left;
+	width: 60%;
 	margin: 0 auto
+}
+.information{
+	width: 39%;
+
+	border-top: 8px #33cc33 solid;
+	display: inline-block;
+	text-align: left;
+
+}
+.donations{
+	margin: 20px;
+	color: #0a290a;
+}
+.information input[type=submit]{
+	background-color: #33cc33;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	color: #F0F4FF;
+	padding:10px;
+	width: 80%;
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+.information input[type=submit]:hover{
+	background-color: #2eb82e;
+	box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.81);
+
+}
+.achieved{
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 44px;
+	color: #33cc33;
+}
+.users{
+	color: #2eb82e;
+	font-weight: bold;
+	font-size: 20px;
+}
+.projTitle{
+
+	font-family: 'Courgette', cursive;
+	font-weight: bold;
+}
+.sideMenu{
+	font-family: "Helvetica", "sans-serif";
+	font-size: small;
+	text-decoration: none;
+	color: #A9B2B6;
+	border: #aaaaaa 2px solid;
+}
+.sideMenu a{
+	text-decoration:none;
+	color: #A9B2B6;
 }

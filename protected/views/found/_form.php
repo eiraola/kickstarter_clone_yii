@@ -27,7 +27,7 @@
 
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Donate' : 'Save'); ?>
+		<?php echo CHtml::submitButton($model->isNewRecord ? 'Support this project' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

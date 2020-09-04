@@ -2,7 +2,7 @@
 
 Yii::import('zii.widgets.CPortlet');
 
-class UserMenu extends CPortlet
+class GuestMenu extends CPortlet
 {
     public function init()
     {
@@ -12,6 +12,6 @@ class UserMenu extends CPortlet
 
     protected function renderContent()
     {
-        $this->render('userMenu');
+        $this->render('guestMenu');
     }
 }

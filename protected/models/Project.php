@@ -58,6 +58,8 @@ class Project extends CActiveRecord
             'found' => array(self::HAS_MANY, 'Found', 'project_id'),
             'foundsum' => array(self::STAT, 'Found', 'project_id','select'=>'sum(amount)',),
             'likes' => array(self::HAS_MANY, 'LikeProject', 'project_id'),
+            'likeCounts'=>array(self::STAT, 'LikeProject', 'project_id','select'=>'count(distinct( user_id))',),
+            'founders'=>array(self::STAT, 'Found', 'project_id','select'=>'count(distinct( user_id))',),
 
 
 

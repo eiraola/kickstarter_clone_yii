@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/protected/components/GuestMenu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/protected/components/views/guestMenu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/components/UserMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/components/UserMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/components/views/userMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/components/views/userMenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/models/Project.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/models/Project.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/views/likeProject/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/likeProject/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/found/_form.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/found/_form.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/layouts/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/layouts/main.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/protected/views/project/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/project/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/views/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/views/user/create.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,11 +35,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/protected/views/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/protected/components/views" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\yii1\kickstarter\protected\components\views" />
+      <recent name="C:\wamp64\www\yii1\kickstarter\protected\components" />
       <recent name="C:\wamp64\www\yii1\kickstarter\protected\views\project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -48,7 +58,8 @@
       <updated>1599028607093</updated>
       <workItem from="1599028608172" duration="26261000" />
       <workItem from="1599111011059" duration="36378000" />
-      <workItem from="1599194214139" duration="17696000" />
+      <workItem from="1599194214139" duration="27970000" />
+      <workItem from="1599226490833" duration="4848000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -113,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599213134981</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Like system on completed!">
+      <created>1599214362270</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1599214362270</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,17 +147,18 @@
     <MESSAGE value="Added found support" />
     <MESSAGE value="Donations fully operational!" />
     <MESSAGE value="Like system on process" />
-    <option name="LAST_COMMIT_MESSAGE" value="Like system on process" />
+    <MESSAGE value="Like system on completed!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Like system on completed!" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599127820446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599127820446" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599213133889">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599214361155">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213133889" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599214361155" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1599213126346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -152,25 +171,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="743" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599047516491" />
-    <state x="718" y="243" key="NewPhpClassDialog" timestamp="1599136987311">
+    <state x="718" y="243" key="NewPhpClassDialog" timestamp="1599230273319">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="718" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599136987311" />
+    <state x="718" y="243" key="NewPhpClassDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599230273319" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1599137189932">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599137189932" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599213199621">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599214368636">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213199621" />
-    <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599208645180">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599214368636" />
+    <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599224659400">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1110" y="243" width="585" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599208645180" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1599121547722">
+    <state x="1110" y="243" width="585" height="558" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599224659400" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1599217640510">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599121547722" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599217640510" />
   </component>
 </project>

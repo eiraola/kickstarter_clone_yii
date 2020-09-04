@@ -17,11 +17,35 @@ $this->menu = array(
 ?>
 
 <div class="ptitle"><h1><?php echo $model->title; ?></h1></div>
-
+<?php if (Yii::app()->user->hasFlash('commentSubmitted')): ?>
+    <div class="flash-success">
+        <?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
+    </div>
+<?php endif; ?>
 <div class="ppicDiv">
     <?php echo '<img src="images/profile.jpg" class="pprojPic">'; ?></h1>
+</div>
+
+<div class="information">
+    <div class="donations">
+
+        <div class="achieved">
+             <?php echo $model->foundsum. '&#36';?><br/>
+        </div>
+
+        <?php echo 'contributed from <span class="users">'. $model->founders.' </span>user(s)!'; ?><br/><br/>
+        <?php $this->renderPartial('/found/_form', array(
+            'model' => $founds,
+        )); ?>
+        <?php echo '<span class="users">'.$model->likeCounts.'</span> user(s) liked this project! '; ?><br/><br/>
+        <?php $this->renderPartial('/likeProject/_form', array(
+            'model' => $like,
+        )); ?>
+    </div>
+
 
 </div>
+
 <div class="pview">
 
 
@@ -40,39 +64,35 @@ $this->menu = array(
 
 
 </div>
-<div class="donations"> <?php $this->renderPartial('/found/_form', array(
-        'model' => $founds,
-    )); ?></div>
 
-<h3>Leave a Comment</h3>
 
-<?php if (Yii::app()->user->hasFlash('commentSubmitted')): ?>
-    <div class="flash-success">
-        <?php echo Yii::app()->user->getFlash('commentSubmitted'); ?>
+<div class="commentBlock">
+
+
+
+
+
+
+
+
+
+    <div id="comments">
+        <?php if ($model->commentCount >= 1): ?>
+            <h3>
+                <?php echo $model->commentCount . ' comment(s)';   ?>
+            </h3>
+
+            <?php $this->renderPartial('_comments', array(
+                'data' => $model,
+                'comments' => $model->comments,
+            )); ?>
+        <?php else: ?> There are no comments
+        <?php endif; ?>
+
+
     </div>
-<?php endif; ?>
-
-<?php $this->renderPartial('/comment/_form', array(
-    'model' => $comment,
-)); ?>
-
-<?php $this->renderPartial('/likeProject/_form', array(
-    'model' => $like,
-)); ?>
-
-
-<div id="comments">
-    <?php if ($model->commentCount >= 1): ?>
-        <h3>
-            <?php echo $model->commentCount . 'comment(s)' . $model->foundsum; ?>
-        </h3>
-
-        <?php $this->renderPartial('_comments', array(
-            'data' => $model,
-            'comments' => $model->comments,
-        )); ?>
-    <?php else: ?> There are no comments
-    <?php endif; ?>
-
-
+    <h3>Leave a Comment</h3>
+    <?php $this->renderPartial('/comment/_form', array(
+        'model' => $comment,
+    )); ?>
 </div>
