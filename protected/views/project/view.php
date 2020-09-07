@@ -29,11 +29,16 @@ $this->menu = array(
 
 <div class="information">
     <div class="donations">
-
-        <div class="achieved">
-             <?php echo $model->foundsum. '&#36';?><br/>
-        </div>
-
+        <?php if($model->foundsum>=$model->aim):?>
+            <div class="achieved">
+                 <?php echo $model->foundsum. '&#36';?><br/>
+            </div>
+        <?php else: ?>
+            <div class="notachieved">
+                <?php echo $model->foundsum. '&#36';?><br/>
+            </div>
+        <?php endif ?>
+        <?php echo 'of <span class="users">'.$model->aim. '&#36</span> objective.';?><br/>
         <?php echo 'contributed from <span class="users">'. $model->founders.' </span>user(s)!'; ?><br/><br/>
         <?php $this->renderPartial('/found/_form', array(
             'model' => $founds,

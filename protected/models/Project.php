@@ -54,8 +54,7 @@ class Project extends CActiveRecord
         return array(
             'author' => array(self::BELONGS_TO, 'User', 'author_id'),
             'types' => array(self::BELONGS_TO, 'Type', 'type'),
-            'comments' => array(self::HAS_MANY, 'Comment', 'project_id',
-                'order'=>'comments.create_time DESC'),
+            'comments' => array(self::HAS_MANY, 'Comment', 'project_id', 'order'=>'comments.create_time DESC'),
             'commentCount' => array(self::STAT, 'Comment', 'project_id'),
             'likeCount' => array(self::STAT, 'LikeProject', 'project_id'),
             'found' => array(self::HAS_MANY, 'Found', 'project_id'),

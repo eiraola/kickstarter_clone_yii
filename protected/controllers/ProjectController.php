@@ -196,6 +196,13 @@ class ProjectController extends Controller
             'dataProvider'=>$dataProvider,
         ));
     }
+    public function actionUserProjects()
+    {
+        $dataProvider=new CActiveDataProvider('Project',array('criteria'=>array('condition'=>'author_id='.Yii::app()->user->id)));
+        $this->render('userProjects',array(
+            'dataProvider'=>$dataProvider,
+        ));
+    }
 
 	/**
 	 * Manages all models.

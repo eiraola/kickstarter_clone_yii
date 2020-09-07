@@ -115,8 +115,5 @@ class User extends CActiveRecord
         return CPasswordHelper::hashPassword($password);
     }
 
-    public function beforeSave(){
 
-	    $this->password = $this->hashPassword($this->password);
-    }
 }
