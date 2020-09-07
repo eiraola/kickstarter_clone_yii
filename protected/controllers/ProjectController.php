@@ -28,7 +28,7 @@ class ProjectController extends Controller
     {
         return array(
             array('allow',  // allow all users to perform 'list' and 'show' actions
-                'actions'=>array('index', 'view'),
+                'actions'=>array('index','IndexBGames','IndexGames','IndexMovies'),
                 'users'=>array('*'),
             ),
             array('allow', // allow authenticated users to perform any action
@@ -114,8 +114,12 @@ class ProjectController extends Controller
 		if(isset($_POST['Project']))
 		{
 			$model->attributes=$_POST['Project'];
-			if($model->save())
+            $model->image=CUploadedFile::getInstance($model,'image');
+			if($model->save()){
+                $model->image->saveAs('images\img'. $model->id.'.jpg',true);
 				$this->redirect(array('view','id'=>$model->id));
+            }
+
 		}
 
 		$this->render('create',array(

@@ -23,7 +23,8 @@ $this->menu = array(
     </div>
 <?php endif; ?>
 <div class="ppicDiv">
-    <?php echo '<img src="images/profile.jpg" class="pprojPic">'; ?></h1>
+    <img src='<?php echo Yii::app()->request->getBaseUrl(true).'\images\img'. $model->id.'.jpg'; ?>' class="pprojPic" />
+
 </div>
 
 <div class="information">
@@ -51,8 +52,8 @@ $this->menu = array(
 
     <div class="author"><b> Author </b>: <?php echo $model->author->username ?><br/></div>
 
-    <b><?php echo CHtml::encode($model->getAttributeLabel('content')); ?>: </b>
-    <?php echo CHtml::encode($model->content); ?>
+   <!-- <b><?php echo CHtml::encode($model->getAttributeLabel('content')); ?>: </b>-->
+    <div class="proContent"><?php echo CHtml::encode($model->content); ?></div>
 
 
     <div class="time">

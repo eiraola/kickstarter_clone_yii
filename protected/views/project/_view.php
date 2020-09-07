@@ -5,8 +5,8 @@
 
 <div class="view">
     <div class="projPic">
-        <?php echo CHtml::link( '<img src="images/profile.jpg" class="projPic">', array('view', 'id'=>$data->id));?></h1>
-
+        <?php echo CHtml::link( '<img src="images/img'.$data->id.'.jpg" class="projPic">', array('view', 'id'=>$data->id));?></h1>
+        
     </div>
 
     <b><?php /*echo CHtml::encode($data->getAttributeLabel('type'));*/ ?> </b>

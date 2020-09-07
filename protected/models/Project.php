@@ -12,6 +12,8 @@
  * @property integer $create_time
  * @property integer $update_time
  * @property integer $author_id
+ * @property integer $aim
+ * @property string $image
  */
 class Project extends CActiveRecord
 {
@@ -31,7 +33,8 @@ class Project extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('title, content, type, status', 'required'),
+			array('title, content, type, aim', 'required'),
+            array('image', 'file', 'types'=>'jpg, gif, png', 'safe' => false),
 			array('type, status, create_time, update_time, author_id', 'numerical', 'integerOnly'=>true),
 			array('title', 'length', 'max'=>128),
             array('type', 'normalizeType'),
@@ -80,6 +83,8 @@ class Project extends CActiveRecord
 			'create_time' => 'Created at',
 			'update_time' => 'Update Time',
 			'author_id' => 'Author',
+            'aim' => 'Aim',
+            'image' => 'Image',
 		);
 	}
 
@@ -109,6 +114,8 @@ class Project extends CActiveRecord
 		$criteria->compare('create_time',$this->create_time);
 		$criteria->compare('update_time',$this->update_time);
 		$criteria->compare('author_id',$this->author_id);
+        $criteria->compare('aim',$this->aim);
+        $criteria->compare('image',$this->image);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -146,6 +153,7 @@ class Project extends CActiveRecord
                 $this->create_time=$this->update_time=time();
                 $this->author_id=Yii::app()->user->id;
                 $this->type=$this->type+1;
+                $this->status=1;
             }
             else
                 $this->update_time=time();

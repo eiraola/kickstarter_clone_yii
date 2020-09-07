@@ -26,6 +26,8 @@
 	</div>
 
 
+
+
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Support this project' : 'Save'); ?>
 	</div>
