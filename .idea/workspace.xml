@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ed79f016-eed8-41f3-8ce0-8af4ffc49997" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protected/controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/config/database.php" beforeDir="false" afterPath="$PROJECT_DIR$/protected/config/database.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protected/data/schema.mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/protected/data/schema.mysql.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +26,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/protected/views/project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -52,7 +53,9 @@
       <workItem from="1599111011059" duration="36378000" />
       <workItem from="1599194214139" duration="27970000" />
       <workItem from="1599226490833" duration="6820000" />
-      <workItem from="1599461476530" duration="23975000" />
+      <workItem from="1599461476530" duration="26887000" />
+      <workItem from="1599542941881" duration="1541000" />
+      <workItem from="1599634784184" duration="946000" />
     </task>
     <task id="LOCAL-00001" summary="instal gii">
       <created>1599049299505</created>
@@ -145,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599491968828</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Minnor fix">
+      <created>1599494840021</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1599494840021</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,21 +175,26 @@
     <MESSAGE value="new user login mode" />
     <MESSAGE value="image upload handled" />
     <MESSAGE value="Manage account done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Manage account done" />
+    <MESSAGE value="Minnor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minnor fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599468991758">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="701" y="322" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599468991758" />
-    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599491966579">
+    <state x="585" y="88" key="CommitChangelistDialog2" timestamp="1599494838971">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599491966579" />
+    <state x="585" y="88" key="CommitChangelistDialog2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599494838971" />
     <state x="184" y="86" key="DiffContextDialog" timestamp="1599213126346">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="86" key="DiffContextDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599213126346" />
+    <state x="740" y="262" key="FileChooserDialogImpl" timestamp="1599573130891">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="262" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599573130891" />
     <state x="838" y="418" key="Github.ShareDialog" timestamp="1599047459020">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -196,10 +211,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599137189932" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599491975674">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1599494866583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599491975674" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599494866583" />
     <state x="1110" y="243" width="585" height="558" key="find.popup" timestamp="1599233368236">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

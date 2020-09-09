@@ -1,109 +1,153 @@
-CREATE TABLE tbl_user
-(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	username VARCHAR(128) NOT NULL,
-	password VARCHAR(128) NOT NULL,
-	email VARCHAR(128) NOT NULL,
-	image VARCHAR(128) NOT NULL,
-	profile TEXT
-);
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 07-09-2020 a las 16:41:13
+-- Versión del servidor: 10.4.10-MariaDB
+-- Versión de PHP: 7.3.12
 
-CREATE TABLE tbl_project
-(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	title VARCHAR(128) NOT NULL,
-	content TEXT NOT NULL,
-	type INTEGER NOT NULL,
-	status INTEGER NOT NULL,
-	create_time INTEGER,
-	update_time INTEGER,
-	author_id INTEGER NOT NULL,
-	CONSTRAINT FK_project_author FOREIGN KEY (author_id)
-		REFERENCES tbl_user (id) ON DELETE CASCADE ON UPDATE RESTRICT,
-	CONSTRAINT FK_project_type FOREIGN KEY (type)
-		REFERENCES tbl_type (id) ON DELETE CASCADE ON UPDATE RESTRICT
-);
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-CREATE TABLE tbl_comment
-(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	content TEXT NOT NULL,
-	status INTEGER NOT NULL,
-	create_time INTEGER,
-	author VARCHAR(128) NOT NULL,
-	email VARCHAR(128) NOT NULL,
-	url VARCHAR(128),
-	user_id INTEGER NOT NULL,
-	project_id INTEGER NOT NULL,
-	CONSTRAINT FK_comment_post FOREIGN KEY (user_id)
-		REFERENCES tbl_user (id) ON DELETE CASCADE ON UPDATE RESTRICT,
-	CONSTRAINT FK_post_project FOREIGN KEY (project_id)
-		REFERENCES tbl_project (id) ON DELETE CASCADE ON UPDATE RESTRICT
-);
 
-CREATE TABLE tbl_type
-(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	name VARCHAR(128) NOT NULL
-);
-CREATE TABLE tbl_like_project
-(
-    id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	user_id INTEGER NOT NULL,
-	project_id INTEGER NOT NULL,
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-	CONSTRAINT FK_like_user FOREIGN KEY (user_id)
-		REFERENCES tbl_user (id) ON DELETE CASCADE ON UPDATE RESTRICT,
-	CONSTRAINT FK_like_project FOREIGN KEY (project_id)
-		REFERENCES tbl_project (id) ON DELETE CASCADE ON UPDATE RESTRICT
-);
+--
+-- Base de datos: `kickdb`
+--
 
-CREATE TABLE tbl_like_comment
-(
-	user_id INTEGER NOT NULL,
-	comment_id INTEGER NOT NULL,
+-- --------------------------------------------------------
 
-	CONSTRAINT FK_like_user FOREIGN KEY (user_id)
-		REFERENCES tbl_user (id) ON DELETE CASCADE ON UPDATE RESTRICT,
-	CONSTRAINT FK_like_comment FOREIGN KEY (comment_id)
-		REFERENCES tbl_comment (id) ON DELETE CASCADE ON UPDATE RESTRICT
-);
+--
+-- Estructura de tabla para la tabla `tbl_comment`
+--
 
-CREATE TABLE tbl_found
-(
-	id INTEGER NOT NULL PRIMARY KEY AUTO_INCREMENT,
-	amount INTEGER NOT NULL,
+DROP TABLE IF EXISTS `tbl_comment`;
+CREATE TABLE IF NOT EXISTS `tbl_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `content` text NOT NULL,
+  `status` int(11) NOT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `author` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `url` varchar(128) DEFAULT NULL,
+  `user_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_comment_post` (`user_id`),
+  KEY `FK_post_project` (`project_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
 
-	user_id INTEGER NOT NULL,
-	project_id INTEGER NOT NULL,
 
-	CONSTRAINT FK_user_found FOREIGN KEY (user_id)
-		REFERENCES tbl_user (id) ON DELETE CASCADE ON UPDATE RESTRICT,
-	CONSTRAINT FK_project_found FOREIGN KEY (project_id)
-		REFERENCES tbl_project (id) ON DELETE CASCADE ON UPDATE RESTRICT
-);
 
-INSERT INTO tbl_user (username, password, email) VALUES ('test1', 'pass1', 'test1@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test2', 'pass2', 'test2@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test3', 'pass3', 'test3@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test4', 'pass4', 'test4@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test5', 'pass5', 'test5@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test6', 'pass6', 'test6@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test7', 'pass7', 'test7@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test8', 'pass8', 'test8@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test9', 'pass9', 'test9@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test10', 'pass10', 'test10@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test11', 'pass11', 'test11@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test12', 'pass12', 'test12@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test13', 'pass13', 'test13@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test14', 'pass14', 'test14@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test15', 'pass15', 'test15@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test16', 'pass16', 'test16@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test17', 'pass17', 'test17@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test18', 'pass18', 'test18@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test19', 'pass19', 'test19@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test20', 'pass20', 'test20@example.com');
-INSERT INTO tbl_user (username, password, email) VALUES ('test21', 'pass21', 'test21@example.com');
-ALTER TABLE `tbl_project`
-ADD image varchar(255);
-ALTER TABLE `tbl_project` ADD aim INTEGER;
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_found`
+--
+
+DROP TABLE IF EXISTS `tbl_found`;
+CREATE TABLE IF NOT EXISTS `tbl_found` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `amount` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_user_found` (`user_id`),
+  KEY `FK_project_found` (`project_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_like_project`
+--
+
+DROP TABLE IF EXISTS `tbl_like_project`;
+CREATE TABLE IF NOT EXISTS `tbl_like_project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `project_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_like_user` (`user_id`),
+  KEY `FK_like_project` (`project_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_project`
+--
+
+DROP TABLE IF EXISTS `tbl_project`;
+CREATE TABLE IF NOT EXISTS `tbl_project` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(128) NOT NULL,
+  `content` text NOT NULL,
+  `type` int(11) NOT NULL,
+  `status` int(11) NOT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `update_time` int(11) DEFAULT NULL,
+  `author_id` int(11) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `aim` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FK_project_author` (`author_id`),
+  KEY `FK_project_type` (`type`)
+) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=latin1;
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_type`
+--
+
+DROP TABLE IF EXISTS `tbl_type`;
+CREATE TABLE IF NOT EXISTS `tbl_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_type`
+--
+
+INSERT INTO `tbl_type` (`id`, `name`) VALUES
+(1, 'videogames'),
+(2, 'boardgames'),
+(3, 'movies');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_user`
+--
+
+DROP TABLE IF EXISTS `tbl_user`;
+CREATE TABLE IF NOT EXISTS `tbl_user` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(128) NOT NULL,
+  `password` varchar(128) NOT NULL,
+  `email` varchar(128) NOT NULL,
+  `image` varchar(128) NOT NULL,
+  `profile` text DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+
+
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
